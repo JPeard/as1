@@ -50,7 +50,7 @@ public class AddLogActivity extends AppCompatActivity {
 
         if (message.equals("new")){
             loadFromFile();
-            fuelCost.setText(String.format("  %f cents",0.0));
+            fuelCost.setText(String.format("  %.1f cents",0.0));
         }
         else{
 	    // Fill the edit text blocks with the previous values
@@ -62,7 +62,7 @@ public class AddLogActivity extends AppCompatActivity {
             gradeText.setText(logs.getIndex(index).getFuel_grade());
             amountText.setText(logs.getIndex(index).getFuel_amount().toString());
             unitText.setText(logs.getIndex(index).getUnit_cost().toString());
-            fuelCost.setText(String.format("  %f cents", logs.getIndex(index).getFuel_cost()));
+            fuelCost.setText(String.format("  %.1f cents", logs.getIndex(index).getFuel_cost()));
         }
     }
 
