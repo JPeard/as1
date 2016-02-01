@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    tools:context="com.example.jpeard.as1.LogViewingActivity"
+    tools:showIn="@layout/activity_log_viewing">
+
+   <TextView
+        android:id="@+id/oldTweetsTitle"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="jpeard-FuelTrack" />
+
+    <ListView
+        android:id="@+id/logEntriesList"
+        android:layout_width="fill_parent"
+        android:layout_height="150dp"
+        android:layout_weight="1"
+        android:scrollbars="vertical" >
+
+    </ListView>
+
+    <TextView
+        android:id="@+id/hello"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/editing" />
+
+    <EditText
+        android:id="@+id/body"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="horizontal" />
+
+    <Button
+        android:id="@+id/edit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/edit"
+        android:onClick="EditLog"/>
+
+    <Button
+        android:id="@+id/clear"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/clear"
+        android:onClick="ClearLog"/>
+
+    <Button
+        android:id="@+id/add"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/add"
+        android:onClick="AddLog"/>
+
+</LinearLayout>

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    android:orientation="vertical"
+    tools:context="com.example.jpeard.as1.AddLogActivity"
+    tools:showIn="@layout/activity_add_log">
+
+    <TextView
+        android:id="@+id/date_message"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/addDate" />
+
+    <EditText
+        android:id="@+id/Date"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="horizontal" />
+
+    <TextView
+        android:id="@+id/station_message"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/addStation" />
+
+    <EditText
+        android:id="@+id/Station"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="horizontal" />
+
+    <TextView
+        android:id="@+id/odometer_message"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/addOdometer" />
+
+    <EditText
+        android:id="@+id/Odometer"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="horizontal" />
+    <TextView
+        android:id="@+id/grade_message"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/addFuelGrade" />
+
+    <EditText
+        android:id="@+id/fuelGrade"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="horizontal" />
+
+    <TextView
+        android:id="@+id/amount_message"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/addFuelAmount" />
+
+    <EditText
+        android:id="@+id/fuelAmount"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="horizontal" />
+
+    <TextView
+        android:id="@+id/unit_message"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/addUnitCost" />
+
+    <EditText
+        android:id="@+id/unitCost"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="horizontal" />
+
+    <Button
+        android:id="@+id/save"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/save"
+        android:onClick="SaveEdit"/>
+
+    <Button
+        android:id="@+id/cancel"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/cancel"
+        android:onClick="CancelAdd"/>
+
+</LinearLayout>

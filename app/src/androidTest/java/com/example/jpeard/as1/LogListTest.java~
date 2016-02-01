@@ -1,0 +1,11 @@
+package com.example.jpeard.as1;
+
+import android.test.ActivityInstrumentationTestCase2;
+
+/**
+ * Created by jpeard on 1/27/16.
+ */
+public class LogListTest extends ActivityInstrumentationTestCase2 {
+    public  LogListTest() {super(LogViewingActivity.class);}
+
+}
