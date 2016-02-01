@@ -14,4 +14,5 @@
     <string name="addFuelGrade">Enter the grade of fuel purchased</string>
     <string name="addFuelAmount">Enter the amount of fuel purchased in Litres to 3 decimal places</string>
     <string name="addUnitCost">Enter the cost of fuel purchased in cents/Litre to 1 decimal place</string>
+    <string name="fuelCost">The total cost of fuel was</string>
 </resources>

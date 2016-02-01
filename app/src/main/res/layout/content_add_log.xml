@@ -80,6 +80,17 @@
         android:layout_height="wrap_content"
         android:scrollbars="horizontal" />
 
+    <TextView
+        android:id="@+id/cost_message"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/fuelCost" />
+
+    <TextView
+        android:id="@+id/cost_value"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+
     <Button
         android:id="@+id/save"
         android:layout_width="fill_parent"

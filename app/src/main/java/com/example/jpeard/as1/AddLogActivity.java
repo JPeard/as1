@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.TextView;
 
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
@@ -24,6 +25,7 @@ public class AddLogActivity extends AppCompatActivity {
     private String message;
     private static final String FILENAME = "logs.sav";
     private EditText dateText, stationText, odometerText, gradeText, amountText, unitText;
+    private TextView fuelCost;
 
     private LogList logs = new LogList();
 
@@ -40,13 +42,15 @@ public class AddLogActivity extends AppCompatActivity {
         gradeText = (EditText) findViewById(R.id.fuelGrade);
         amountText = (EditText) findViewById(R.id.fuelAmount);
         unitText = (EditText) findViewById(R.id.unitCost);
+        fuelCost = (TextView) findViewById(R.id.cost_value);
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         Intent intent = getIntent();
         message = intent.getStringExtra(LogViewingActivity.EXTRA_MESSAGE);
 
         if (message.equals("new")){
-
+            loadFromFile();
+            fuelCost.setText(String.format("  %f cents",0.0));
         }
         else{
 	    // Fill the edit text blocks with the previous values
@@ -58,6 +62,7 @@ public class AddLogActivity extends AppCompatActivity {
             gradeText.setText(logs.getIndex(index).getFuel_grade());
             amountText.setText(logs.getIndex(index).getFuel_amount().toString());
             unitText.setText(logs.getIndex(index).getUnit_cost().toString());
+            fuelCost.setText(String.format("  %f cents", logs.getIndex(index).getFuel_cost()));
         }
     }
 

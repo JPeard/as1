@@ -57,7 +57,7 @@ public class LogList {
 	// ie. "Log 1", "Log 2", etc.
         ArrayList<String> temp = new ArrayList<String>();
         for (int i = 0; i < logs.size(); i++){
-            temp.add(String.format("Log %d", i+1));
+            temp.add(logs.get(i).getDate());
         }
         return temp;
     }

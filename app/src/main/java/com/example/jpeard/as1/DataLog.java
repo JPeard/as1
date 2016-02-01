@@ -16,7 +16,7 @@ public class DataLog {
     private Double unit_cost;
     private Double fuel_cost;
 
-    private SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-mm-dd");
+    //private SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-mm-dd");
 
     public DataLog(){
 
@@ -32,7 +32,7 @@ public class DataLog {
         this.fuel_cost = this.fuel_amount*this.unit_cost;}
 
     public String getDate() {
-        return dateFormat.format(date);
+        return new SimpleDateFormat("yyyy-mm-dd").format(date);
     }
 
     public String getStation() {
@@ -60,7 +60,7 @@ public class DataLog {
     }
 
     public void setDate(String date) {
-        this.date = dateFormat.parse(date,new ParsePosition(0));
+        this.date = new SimpleDateFormat("yyyy-mm-dd").parse(date,new ParsePosition(0));
     }
 
     public void setStation(String station) {
